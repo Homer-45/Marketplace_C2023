@@ -5,25 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <title>{{ config('app.name', 'Marketplace') }}</title>
         <!-- Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100" style="background-image: url('dist/img/background.jpg'); background-size: 1707px 780px; background-repeat: no-repeat;">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
+    <body class="font-sans text-gray-900 antialiased" >
+        <div class="bg" style="background-image: url('dist/img/bg.jpeg'); background-size: cover; background-repeat: no-repeat; padding:10px;">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="{{ route('login') }}"><img src="{{ asset('dist/img/logo.png') }}" alt="Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="">Explore</a></li>
+                    <li><a style="padding: 10px; color:blue; border-radius: 10px; background-color: whitesmoke;" href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('register') }}">Sign up</a></li>
+                </ul>
+            </nav>
+            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" >
+                    {{-- <div>
+                        <a href="/">
+                            <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                        </a>
+                    </div> --}}
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+                    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg" style="background-color:rgba(245, 245, 245, 0.486); border-radius: 10px;">
+                        {{ $slot }}
+                    </div>
+
+                    
             </div>
         </div>
     </body>

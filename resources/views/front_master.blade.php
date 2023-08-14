@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marketplace | Dashboard</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   <!-- fullCalendar -->
   <link rel="stylesheet" href="{{ asset('plugins/fullcalendar/main.css')}}">
   <!-- Google Font: Source Sans Pro -->
@@ -73,7 +74,7 @@
         <div class="wrapper">
             <aside class="main-sidebar sidebar-light-success sidebar-success elevation-4">
                 <a href="" class="brand-link">
-                    <img src="{{ asset('dist/img/logo.png') }}" class="p-1" height="60" width="60">
+                    <img src="{{ asset('dist/img/logo.png') }}" class="p-1" height="auto" width="60">
                     <span class="brand-text font-weight-black">Marketplace</span>
                 </a>
                 <!-- Sidebar -->
@@ -93,34 +94,34 @@
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                             <li class="nav-item">
-                                <a href="" class="nav-link 
+                                <a href="{{ route('register') }}" class="nav-link 
                                     ">
-                                    <i class="nav-icon fas fa-hippo"></i>
+                                    <i class="nav-icon fas fa-home"></i>
                                     <p>Dashboard</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="" class="nav-link
                                     ">
-                                    <i class="nav-icon fas fa-tractor"></i>
+                                    <i class="nav-icon fas fa-layer-group"></i>
                                     <p>List of Services</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="" class="nav-link">
-                                    <i class="nav-icon far fa-calendar-alt"></i>
+                                    <i class="nav-icon fas fa-people-carry"></i>
                                     <p>Service Providers</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="" class="nav-link">
-                                    <i class="nav-icon fas fa-cog"></i>
+                                    <i class="nav-icon fas fa-user-friends"></i>
                                     <p>Customers</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="" class="nav-link">
-                                    <i class="nav-icon fas fa-clipboard-list"></i>
+                                    <i class="nav-icon fas fa-money-check-alt"></i>
                                     <p>Service Transaction</p>
                                 </a>
                             </li><br>
