@@ -2,12 +2,12 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
     
-    <form class="space-y-6" method="POST" action="{{ route('login') }}" class="p-2">
+    <form class="space-y-6" method="POST" action="{{ route('login') }}">
         @csrf
-        <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
+        <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign In</h5>
         {{-- Enter username --}}
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your username</label>
             <input type="text" name="login" :value="old('login')" required autofocus autocomplete="username" id="login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Username" required>
             <x-input-error :messages="$errors->get('login')" class="mt-2" />
         </div>

@@ -29,7 +29,7 @@
                 </ul>
             </nav> --}}
             
-            <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+            <nav class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
                     <a href="{{ route('login') }}" class="flex items-center p-2" style="background-color: rgba(255, 255, 255, 0.205); margin:0; width: 100px; height:auto; border-radius:10px;">
                         <img src="{{ asset('dist/img/logo.png') }}" class="h-10 mr-3" alt="Marketplace Logo"/>
@@ -44,13 +44,13 @@
                     <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
                         <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                         <li>
-                            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Explore</a>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent">Explore</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
+                            <a href="{{ route('login') }}" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sign Up</a>
+                            <a href="{{ route('register') }}" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sign Up</a>
                         </li>
                         </ul>
                     </div>
@@ -58,17 +58,17 @@
             </nav>
   
             <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" >
-                    {{-- <div>
-                        <a href="/">
-                            <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                        </a>
-                    </div> --}}
-                    <div class="mt-2 w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-                        {{ $slot }}
-                    </div>
-                    {{-- <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg" style="background-color:rgba(245, 245, 245, 0.486); border-radius: 10px;">
-                        
-                    </div> --}}
+                {{-- <div>
+                    <a href="/">
+                        <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    </a>
+                </div> --}}
+                <div class="w-full max-w-sm p-4 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700       backdrop-blur transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
+                    {{ $slot }}
+                </div>
+                {{-- <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg" style="background-color:rgba(245, 245, 245, 0.486); border-radius: 10px;">
+                    
+                </div> --}}
             </div>
         </div>
 
