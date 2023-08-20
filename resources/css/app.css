@@ -4,75 +4,11 @@
 body {
     font-family: 'Poppins';
 }
-input{
+/* input{
     background-color: #003692;
     border-radius: 50px;
 }
-.navbar {
-    /* background-color: rgba(134, 207, 231, 0.473); */
-    /* background-color: rgba(245, 245, 245, 0.11); */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    border-radius: 10px;
-}
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 130px; /* Set the maximum width for the logo image */
-    height: auto;
-    margin-right: 10px; /* Optional spacing between logo and navigation links */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size:medium;
-    transition: color 0.3s ease-in-out;
-    padding: 5px;
-}
-
-.nav-links li a:hover {
-    color: #003692;
-    /* background-color: #5694ffb7; */
-    padding: 5px;
-    /* border-radius: 50px;
-    margin: 0; */
-    border-bottom: 2px solid #003692;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-bottom: 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .nav-links li {
-        margin-left: 20px;
-    }
-}
 .social-icons{
 	padding:30px;
   text-align: center;
@@ -112,4 +48,4 @@ input{
 }
 .input{
     background-color: #176af85e;
-}
+} */
