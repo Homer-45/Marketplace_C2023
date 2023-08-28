@@ -17,7 +17,7 @@ use App\Http\Controllers\AgentController;
 */
 
 Route::get('/', function () {
-    return view('auth.landing-page');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
