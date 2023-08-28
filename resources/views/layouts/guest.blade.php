@@ -29,10 +29,10 @@
                 </ul>
             </nav> --}}
             
-            <nav class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
+            <nav class="sticky top-0 z-40 w-full flex-none transition-colors duration-500 lg:z-50 bg-blue-500">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-                    <a href="{{ route('login') }}" class="flex items-center p-2" style="background-color: rgba(255, 255, 255, 0.205); margin:0; width: 100px; height:auto; border-radius:10px;">
-                        <img src="{{ asset('dist/img/logo.png') }}" class="h-10 mr-3" alt="Marketplace Logo"/>
+                    <a href="{{ route('login') }}" class="flex items-center p-2" style="width: 200px; height:auto;">
+                        <img src="{{ asset('dist/img/logo.png') }}" class="h-12 mr-3" alt="Marketplace Logo"/>
                         {{-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Marketplace for on-demand Services</span> --}}
                     </a>
                     <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
@@ -58,19 +58,16 @@
             </nav>
   
             <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" >
-                {{-- <div>
-                    <a href="/">
-                        <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                    </a>
-                </div> --}}
-                <div class="w-full max-w-sm p-4 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700       backdrop-blur transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75">
+                
+                <div class="bg-white p-8 rounded-md shadow-md w-full sm:w-96 w-full max-w-sm p-4 rounded-lg shadow sm:p-6 md:p-8 ">
                     {{ $slot }}
                 </div>
-                {{-- <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg" style="background-color:rgba(245, 245, 245, 0.486); border-radius: 10px;">
-                    
-                </div> --}}
+                
             </div>
         </div>
+        
+        
+        
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     </body>

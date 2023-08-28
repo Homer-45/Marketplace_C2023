@@ -4,17 +4,17 @@
     
     <form class="space-y-6" method="POST" action="{{ route('login') }}">
         @csrf
-        <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign In</h5>
+        <h5 class="text-xl font-medium text-gray-900 dark:text-dark">Sign In</h5>
         {{-- Enter username --}}
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your username</label>
-            <input type="text" name="login" :value="old('login')" required autofocus autocomplete="username" id="login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Username" required>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Your username</label>
+            <input type="text" name="login" :value="old('login')" required autofocus autocomplete="username" id="login" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Username" required>
             <x-input-error :messages="$errors->get('login')" class="mt-2" />
         </div>
         {{-- Enter password --}}
         <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-dark">Your password</label>
+            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
         {{-- Remember_me Lost password --}}
