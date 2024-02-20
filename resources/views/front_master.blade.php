@@ -32,6 +32,15 @@
   <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+
+  <!-- Include AdminLTE CSS and JavaScript -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/js/adminlte.min.js"></script>
+  
+  <!-- Include DataTables CSS and JavaScript -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
   @stack('css')
 </head>
 
@@ -39,7 +48,7 @@
   <div class="wrapper">
 
     <!-- Navbar --> 
-    <nav class="main-header navbar navbar-expand navbar-lightblue navbar-light">
+    <nav class="main-header navbar navbar-expand" style="background: linear-gradient(90deg, rgba(99,102,241,1) 0%, rgba(168,85,247,1) 35%, rgba(236,72,153,1) 100%)">
        <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -56,12 +65,10 @@
                     <h5 class="text-white p-2">{{ Auth::user()->name }} <i class="fas fa-user"></i></h5> 
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
-                    <div class="dropdown-divider"></div>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <a href="route('logout')" class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">Log out</a>
                         </form>
-                    </div>
                 </div>
             </li>
         </ul>
@@ -70,12 +77,12 @@
 
     <!-- Main Sidebar Container -->
 
-    <body class="hold-transition sidebar-mini">
+    <body class="hold-transition sidebar-mini ">
         <div class="wrapper">
-            <aside class="main-sidebar sidebar-light-success sidebar-success elevation-4">
+            <aside class="main-sidebar sidebar-light-success sidebar-success elevation-4 ">
                 <a href="" class="brand-link">
-                    <img src="{{ asset('dist/img/logo.png') }}" class="p-1" height="auto" width="60">
-                    <span class="brand-text font-weight-black">Marketplace</span>
+                    <img src="{{ asset('dist/img/netflixlogo.png') }}" class="p-1" height="auto" width="60">
+                    <span class="brand-text font-weight-black">Netflix Corp.</span>
                 </a>
                 <!-- Sidebar -->
                 <div class="sidebar">
@@ -90,24 +97,24 @@
                     </div>
 
                     <!-- Sidebar Menu -->
-                    <nav class="mt-2">
+                    <nav class="mt-2 ">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                             <li class="nav-item">
-                                <a href="{{ route('dashboard') }}" class="nav-link 
+                                <a href="{{ route('admin.dashboard') }}" class="nav-link 
                                     ">
                                     <i class="nav-icon fas fa-home"></i>
                                     <p>Dashboard</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link
+                                <a href="{{ route('admin.list_of_service') }}" class="nav-link
                                     ">
                                     <i class="nav-icon fas fa-layer-group"></i>
-                                    <p>List of Services</p>
+                                    <p>File Manager</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="" class="nav-link">
                                     <i class="nav-icon fas fa-people-carry"></i>
                                     <p>Service Providers</p>
@@ -124,7 +131,7 @@
                                     <i class="nav-icon fas fa-money-check-alt"></i>
                                     <p>Service Transaction</p>
                                 </a>
-                            </li><br>
+                            </li><br> --}}<br>
                             <li class="nav-item">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
@@ -149,13 +156,13 @@
     </div>
     <!-- /.content-wrapper Dashboard -->
 
-  <footer class="main-footer">
+  {{-- <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.2.0
     </div>
-  </footer>
+  </footer> --}}
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

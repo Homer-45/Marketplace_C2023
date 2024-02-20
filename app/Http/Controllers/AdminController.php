@@ -10,4 +10,9 @@ class AdminController extends Controller
 
         return view('admin.admin_dashboard');
     }
+
+    public function AdminLoS(){
+
+        return view('admin.list_of_service');
+    }
 }

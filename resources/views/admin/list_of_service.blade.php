@@ -1,86 +1,84 @@
 @extends('front_master')
 @section('content')
 <!-- Content Header (Page header) -->
-{{-- <div class="content-header">
+<div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
+                <h1 class="m-0" style="font-weight: 500; font-size: 30px;"><strong>File Manager</strong></h1>
             </div>
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
-</div> --}}
-<!-- /.content-header -->
-
-<!-- Main content -->
-{{-- <section class="content">
-    <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-lightblue">
-                <div class="inner">
-                    <h3>150</h3>
-
-                    <p>Registered</p>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">DataTable Example</h3>
                 </div>
-                <div class="icon">
-                    <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-lightblue">
-                <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                    <p>Farmers</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-ios-people"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-lightblue">
-                <div class="inner">
-                    <h3>44</h3>
-
-                    <p>Livestock</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-lightblue">
-                <div class="inner">
-                    <h3>65</h3>
-
-                    <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <div class="card-body">
+                    <table id="example" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Files</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sample data rows -->
+                            <tr>
+                                <td>Juan Dela Cruz</td>
+                                <td>Description 1</td>
+                                <td><a href="file1.pdf" download>File 1</a></td>
+                                <td><button class="btn btn-danger btn-sm delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>Maria Makiling</td>
+                                <td>Description 2</td>
+                                <td><a href="file2.pdf" download>File 2</a></td>
+                                <td><button class="btn btn-danger btn-sm delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>Roronoa Zoro</td>
+                                <td>Description 3</td>
+                                <td><a href="file3.pdf" download>File 3</a></td>
+                                <td><button class="btn btn-danger btn-sm delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>Monkey Luffy</td>
+                                <td>Description 4</td>
+                                <td><a href="file4.pdf" download>File 4</a></td>
+                                <td><button class="btn btn-danger btn-sm delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ako si Doggie</td>
+                                <td>Description 5</td>
+                                <td><a href="file5.pdf" download>File 5</a></td>
+                                <td><button class="btn btn-danger btn-sm delete">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <!-- ./col -->
         </div>
-        
-    </div><!-- /.container-fluid -->
-</section> --}}
-<!-- /.content -->
-<h1>list of service</h1>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        // Initialize DataTable
+        var table = $('#example').DataTable({
+            responsive: true
+        });
+
+        // Handle row delete button click
+        $('#example tbody').on('click', '.delete', function() {
+            var row = table.row($(this).parents('tr'));
+            row.remove().draw();
+        });
+    });
+</script>
 @endsection
